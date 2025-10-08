@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footer Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: white;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        footer {
+            background: white;
+            color: black;
+            overflow: hidden;
+        }
+
+        .top-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 10%;
+            position: relative;
+        }
+
+        .brand {
+            max-width: 300px;
+        }
+
+        .brand h2 {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: .5rem;
+        }
+
+        .brand p {
+            font-size: 0.9rem;
+            color: black;
+        }
+
+        .nav {
+            display: flex;
+            gap: 4rem;
+        }
+
+        .nav ul {
+            list-style: none;
+        }
+
+        .nav ul li {
+            margin-bottom: .5rem;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav ul li a:hover {
+            color: black;
+        }
+
+        .green-strip {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 0.7rem 0;
+            font-weight: bold;
+        }
+
+        .bottom-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            padding: 2rem 10%;
+            background: white;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .bottom-footer h4 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .bottom-footer ul {
+            list-style: none;
+        }
+
+        .bottom-footer ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .bottom-footer ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 0.9rem;
+        }
+
+        .tweet-box {
+            background: #111;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            max-width: 250px;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+
+        .tweet-box .handle {
+            font-weight: bold;
+            margin-bottom: .5rem;
+            display: block;
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+
+            .top-footer,
+            .bottom-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .tweet-box {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Page content above -->
+
+    <footer>
+        <!-- Top Section -->
+        <div class="top-footer">
+            <div class="brand">
+                <h2>We growing up your business<br>with personal AI manager.</h2>
+                <p>Maxwell, 2023.</p>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Plans & Pricing</a></li>
+                    <li><a href="#">Personal AI Manager</a></li>
+                    <li><a href="#">AI Business Writer</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Papers</a></li>
+                    <li><a href="#">Press Conferences</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Green Strip -->
+        <div class="green-strip">
+            © 2025 Zed homes Inc. All rights reserved. | <a href="#" style="color:#111; text-decoration:none;">Terms of
+                Service</a>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-footer">
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Work With Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Free Demo</a></li>
+                    <li><a href="#">Press Conferences</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="tweet-box">
+                <span class="handle">@maxwellapp</span>
+                We’ve just announced new feature that would help you increase your experience of using Maxwell!
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

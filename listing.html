@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listing Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Circular', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+        }
+
+        body {
+            background-color: #f7f7f7;
+            color: #222222;
+            line-height: 1.5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 24px 32px;
+            border-bottom: 1px solid #ebebeb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 21px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .logo i {
+            margin-right: 8px;
+        }
+
+        .form-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #222222;
+        }
+
+        .form-container {
+            padding: 32px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #222222;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #b0b0b0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #222222;
+            box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-hint {
+            font-size: 14px;
+            color: #717171;
+            margin-top: 6px;
+        }
+
+        .submit-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: white;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #ebebeb;
+            margin: 24px 0;
+        }
+
+        .image-upload {
+            border: 2px dashed #dddddd;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .image-upload:hover {
+            border-color: #b0b0b0;
+        }
+
+        .image-upload i {
+            font-size: 48px;
+            color: #717171;
+            margin-bottom: 16px;
+        }
+
+        .image-upload-text {
+            font-size: 16px;
+            color: #222222;
+            font-weight: 500;
+        }
+
+        .image-upload-subtext {
+            font-size: 14px;
+            color: #717171;
+            margin-top: 4px;
+        }
+
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .amenity-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .amenity-checkbox {
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                border-radius: 0;
+            }
+
+            .header,
+            .form-container {
+                padding: 20px;
+            }
+
+            .amenities-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+
+                <span>HOUSE</span>
+            </div>
+            <div class="form-title">List your property</div>
+        </div>
+
+        <div class="form-container">
+            <div class="form-group">
+                <label class="form-label" for="property-name">Property name</label>
+                <input type="text" id="property-name" class="form-input" placeholder="4 bedroomed house">
+                <div class="form-hint">Give your property a catchy and descriptive name</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="property-price">Price per night</label>
+                <input type="number" id="property-price" class="form-input" placeholder="120 000">
+                <div class="form-hint">Enter the price in KWACHA</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="property-location">Location</label>
+                <input type="text" id="property-location" class="form-input" placeholder="ndola masala">
+                <div class="form-hint">Where is your property located?</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="property-description">Description</label>
+                <textarea id="property-description" class="form-textarea"
+                    placeholder="Describe your property, its unique features, and what guests can expect during their stay..."></textarea>
+                <div class="form-hint">Be descriptive to attract more guests</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form-group">
+                <label class="form-label">Property photos</label>
+                <div class="image-upload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <div class="image-upload-text">Add photos of your property</div>
+                    <div class="image-upload-subtext">Drag and drop or click to upload</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="form-group">
+                <label class="form-label">Amenities</label>
+                <div class="amenities-grid">
+                    <div class="amenity-item">
+                        <input type="checkbox" id="wifi" class="amenity-checkbox">
+                        <label for="wifi">Wi-Fi</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="kitchen" class="amenity-checkbox">
+                        <label for="kitchen">Kitchen</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="parking" class="amenity-checkbox">
+                        <label for="parking">Free parking</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="pool" class="amenity-checkbox">
+                        <label for="pool">Pool</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="ac" class="amenity-checkbox">
+                        <label for="ac">Air conditioning</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="heating" class="amenity-checkbox">
+                        <label for="heating">Heating</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="washer" class="amenity-checkbox">
+                        <label for="washer">Washer</label>
+                    </div>
+                    <div class="amenity-item">
+                        <input type="checkbox" id="dryer" class="amenity-checkbox">
+                        <label for="dryer">Dryer</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <button class="submit-btn">Create listing</button>
+        </div>
+    </div>
+
+    <script>
+        // Add some basic interactivity
+        document.querySelector('.image-upload').addEventListener('click', function () {
+            alert('Image upload functionality would go here in a real application.');
+        });
+
+        document.querySelector('.submit-btn').addEventListener('click', function () {
+            const propertyName = document.getElementById('property-name').value;
+            if (!propertyName) {
+                alert('Please enter a property name');
+                return;
+            }
+
+            alert('Form submitted successfully! In a real application, this data would be sent to a server.');
+        });
+    </script>
+</body>
+
+</html>

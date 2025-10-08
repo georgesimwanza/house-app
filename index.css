@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  background: url('images/cl-20-020_front_6-copy-large_m.webp') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: white;
+  z-index: 100;
+}
+
+header img {
+  width: 50px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+header img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: gray;
+}
+
+.login-btn {
+  padding: 8px 16px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.login-btn:hover {
+  background: white;
+  color: black;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  padding: 12px 30px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid black;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.explore-btn:hover {
+  background: black;
+  color: white;
+  border: 2px solid black;
+  transform: scale(1.05);
+}

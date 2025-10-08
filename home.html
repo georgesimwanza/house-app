@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="george simwanza">
+    <meta name="description"
+        content="Discover top-rated guest-favorite homes and rooms in  Zambia. Browse properties, check prices, select dates, and book your stay easily with our search tool." />
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="nav-list-wrapper">
+            <ul>
+                <li id="home"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-btn-wrapper">
+            <button class="create-listing" onclick="listing()">create-listing</button>
+            <button onclick="login('login.html')" id="button" onmouseover="hover()"
+                onmouseleave="leave()">login</button>
+
+        </div>
+
+
+    </nav>
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="field-wrapper">
+            <span class="field-label">Location</span>
+            <div class="field-value">Where are you going?</div>
+        </div>
+        <div class="field-wrapper">
+            <span class="field-label">Check in</span>
+            <div class="field-value">Add dates</div>
+        </div>
+        <div class="field-wrapper">
+            <span class="field-label">Check out</span>
+            <div class="field-value">Add dates</div>
+        </div>
+        <div class="field-wrapper">
+            <span class="field-label">Guests</span>
+            <div class="field-value">Add guests</div>
+        </div>
+        <button class="search-btn">🔍</button>
+    </div>
+    <!-- Main content section -->
+    <main>
+        <div class="property-card" onclick="list('view.html')">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/huse4.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/room.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/house1.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/house2.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/house3.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">K</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/house6.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/house5.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/house7.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/house8.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/house9.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/room 10.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/room 11.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/room8.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="image-container">
+                <div class="property-image">
+                    <img src="images/room7.jpeg" alt="">
+                </div>
+                <div class="favorite-badge">Guest favorite</div>
+            </div>
+
+            <div class="card-content">
+                <div class="location-header">
+                    <h3 class="location-name">NDOLA ZAMBIA</h3>
+                    <div class="rating">
+                        <svg class="star" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                        <span>5.0</span>
+                    </div>
+                </div>
+
+                <div class="stay-duration">Jan 26 - Feb 2</div>
+
+                <div class="price-container">
+                    <span class="currency">€</span>
+                    <span class="price">124</span>
+                    <span class="per-night">night</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <!-- Top Section -->
+        <div class="top-footer">
+            <div class="brand">
+                <h2>We help you locate your dream homes<br>with personal AI agent.</h2>
+                <p>George, 2025.</p>
+            </div>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">Plans & Pricing</a></li>
+                    <li><a href="#">Personal AI Manager</a></li>
+                    <li><a href="#">AI Bargain hunter</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Papers</a></li>
+                    <li><a href="#">How to videos</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Green Strip -->
+        <div class="green-strip">
+            © 2025 Zed homes Inc. All rights reserved. | <a href="#" style="color:#111; text-decoration:none;">Terms of
+                Service</a>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="bottom-footer">
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Work With Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">how to</a></li>
+                    <li><a href="#">AI features</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="tweet-box">
+                <span class="handle">@George</span>
+                We’ve just announced new feature that would help you increase your experience of using ZedHomes!
+            </div>
+        </div>
+    </footer>
+
+    <button class="dark_mode">dark mode</button>
+    <script src="home.js"></script>
+
+
+</body>
+<html>
